@@ -1,0 +1,80 @@
+.first{
+    display: block;
+    margin-top: 5rem;
+}
+
+.main-text{
+    padding: 5rem;
+    padding-bottom:0;
+}
+
+.main-text p:first-child{
+    padding: 1rem 0;
+}
+
+ul li{
+    font-size: 1.1rem;
+}
+
+
+.deep{
+    color: #17252a;
+}
+
+.b{
+    font-weight: 600;
+}
+
+.tag{
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: .6rem;
+}
+
+.tag span{font-weight: 600;}
+
+.sub-text{
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    color:#fff; 
+    border-radius: 4px;
+    margin: 3rem;
+    padding: 2rem;
+    background-color: #17252a;
+}
+
+.sub-text p:first-child{
+    color:#3aafa9;;
+}
+
+.sub{
+    color: #3aafa9;
+}
+
+#particles-js {
+    position : fixed;
+    width:100%;
+    min-height:100%;
+    z-index:-1;
+}
+
+@media (max-width: 800px){
+    .first{
+        margin-top: 1.4rem;
+    }
+
+    .main-text{
+        padding: 2rem;
+        padding-top:2.5rem;
+    }
+
+    .sub-text{
+        font-size: 16px;
+        margin: 0rem;
+        padding: 2rem;
+    }
+
+    ul li{
+        font-size: 16px;
+    }
+}

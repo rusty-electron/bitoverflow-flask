@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+    {% block style %}
+    
+    {% endblock %}
+    {% block content %}
+
+    <main>
+        <div class="first">
+            <div class="main-text">
+                    <p>WELCOME TO</p>
+                    <div class="h3">BITOVERFLOW</div>
+                    <p>Work on real-life programming projects and learn the Github workflow.</p>
+                    
+                    <p>Choose a project and coordinate with your colleagues and mentor to add your valuable contribution.</p>
+
+                    {% if data.username %}
+                        <div class="active-text-alt">You are logged in as: <span class="spec-alt">{{ data.username }}</span></div>
+                    {% endif %}    
+                
+                    <div class="active-text">SITE UNDER CONSTRUCTION</div>
+                    <div class="active-text-alt">Next Update: Flask Integration</div>
+                    
+                <div class="button-container">
+                {% if data.username %}
+                    <a href="{{ url_for('profile') }}" class="reg long-button">user profile</a>
+                {% else %}
+                    <a href="https://bit.ly/registertechxom" target="blank" class="reg">Register</a>
+                    <a href="{{ url_for('github_login') }}" class="reg">Login</a>
+                {% endif %}
+                </div>
+               
+               
+            </div>
+            <div class="main-image">
+                <img src="{{ url_for('static', filename='img/coding-fun.png') }}" alt="dell photo">
+            </div>
+        </div>
+    </main>
+
+    {% endblock %}

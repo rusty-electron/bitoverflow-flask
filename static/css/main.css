@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+
+body{
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Poppins';
+    background: #3aafa9;
+}
+
+:root{
+    --red: #17252a;
+}
+
+.logo{
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Bungee';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+.spec{
+    color: #3aafa9;
+}
+
+.spec-alt{
+    color: #17252a;
+}
+
+.weight{
+    font-weight: 700;
+}
+
+header{
+    background: var(--red);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    transition: top 0.8s;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top:100%;
+    background: var(--red);
+    width: 100%;
+    left: 0;
+    /* display: none; */
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    color: #3aafa9;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+}
+
+nav a:hover{
+    color: rgba(255,255,255,0.5);
+}
+
+.dell-icon{
+    width: 80px;
+    height: 80px;
+}
+
+.nav-toggle:checked ~ nav{
+    display: block;
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity .25s ease-in-out .25s;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    margin-left:1em;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::after,
+.nav-toggle-label span::before{
+    display: block;
+    height: 4px;
+    width: 2em;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.nav-toggle-label span::after,
+.nav-toggle-label span::before{
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 32px;
+}
+
+.nav-toggle-label span::after{
+    top: 32px;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    color: #fff;
+}
+
+.main-text{
+    color: #fff;
+    padding: 2em;
+    font-family: 'Montserrat';
+}
+
+.main-text p{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.main-text p:first-child{
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.main-text .h3{
+    margin: 10px 0;
+    font-size: 2.2rem;
+    color: #17252a;
+    font-family: 'Bungee';
+    line-height: 2.2rem;
+}
+
+.main-image{
+    padding: 0;
+}
+
+.main-image img{
+    width: 100%;
+}
+
+#particles-js {
+    position : absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.active-text{
+    color: #17252a;
+    font-size: 2rem;
+    font-weight: 600; 
+}
+
+.active-text-alt{
+    font-family: 'Staatliches';
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 7px 0;
+    letter-spacing: 2px;
+}
+
+.reg{
+    text-align: center;
+    width: 120px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem;
+    color: #fff;
+    background-color: #17252a;
+    border-radius: 4px;
+    margin: 1rem 0;
+    margin-right: .5rem;
+}
+
+
+.reg:hover{
+    color: #3aafa9;
+    background-color: #fff;
+}
+
+@media screen and (min-width:800px){
+    .long-button{
+        width: 140px !important;
+    }
+    .nav-toggle-label{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: auto 5fr 1fr; 
+    }
+
+    .logo{
+        margin-left: 15px;
+        grid-column: 1/2;
+        
+    }
+
+    nav{
+        all:unset;
+
+        display: flex;
+        align-items: center;
+        grid-column: 2/3;
+    }
+
+    nav a{
+        opacity: 1;
+        margin-bottom: 0;
+        margin-left: 3em;
+        position: relative;
+    }
+
+    nav a::before{
+        position: absolute;
+        top: -.5em;
+        left: 0;
+        right: 0;
+
+
+        content:'';
+        display: block;
+        height: 5px;
+        background: #fff;
+        transform: scale(0,1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before{
+        transform: scale(1,1);
+    }
+
+    .first{
+        height: 100vh;
+        margin: 0;
+    }
+
+    .first{
+        display: grid;
+        grid-template-columns: 120px minmax(300px,600px) auto 600px 120px; 
+    }
+    
+    .main-text{
+        grid-column: 2/3;
+        align-self: center;
+    }
+
+    .main-image{
+        grid-column: 4/5;
+        align-self: center;
+    }
+
+    .main-text .h3{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .main-text p{
+        font-size:1.3rem;
+    }
+
+    
+}
+
+
+/* because I screwed up by using bungee*/
+@media (max-width: 800px){
+    .main-image{
+        order: -1;
+        padding: 0 1.2rem;
+        margin-bottom: -10px;
+    }
+
+    .first{
+        margin-top: 60px;
+    }
+
+    .logo{
+        line-height: 2.9rem;
+    }
+
+    .active-text{
+        color: #17252a;
+        font-size: 1.2rem;
+        font-weight: 600; 
+    }
+    
+    .active-text-alt{
+        font-family: 'Staatliches';
+        color: #fff;
+        font-size: 1rem;
+        margin: 7px 0;
+        letter-spacing: 2px;
+    }
+
+    .reg{
+        width: 120px;
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
+}

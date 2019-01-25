@@ -1,0 +1,33 @@
+.main-image img{
+    width: 300px;
+    border: 14px solid #fff;
+    border-radius: 5px;
+}
+
+.main-image{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image p{
+    margin-top: -3rem;
+}
+
+@media (max-width: 800px){
+    .main-image img{
+        width: 100px;
+        border: 8px solid #fff;
+        border-radius: 5px;
+    }
+
+    .main-image{
+        order: -1;
+    }
+
+    .main-image p{
+        margin-top: 0rem;
+    }
+}

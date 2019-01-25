@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/guide.css') }}">
+    {% endblock %}
+
+    {% block home %}
+       {{ super() }}
+    {% endblock %}
+
+    {% block content %}
+
+    <main>
+        <div class="first">
+            <div class="main-text">
+                    <p><span class="deep">Event</span> Guidelines</p>
+                    <div class="tag"><span class="deep">Duration:</span> Two Weeks</div>
+                    <p><span class="deep">BitOverflow​</span> is an online event encouraging contributions to ​<i>Open Source Software</i>​. The
+                        contributions in the form of code will be accepted at the official repository of <span class="deep">​bitoverflow</span>​ hosted
+                        on the code platform ​<span class="deep">GitHub​</span>.</p>
+                    
+                    <p>It is to be noted that:
+                        <ul>
+                            <li>Participants can contribute to the repositories of their <span>own choice</span class="deep"></li>
+                            <li>Participants can contribute to <span class="deep">multiple</span> repositories</li>
+                        </ul>
+                    </p>
+                        
+                    <p>Some repositories will be specially targeted at beginners, e.g. <i>​submit code for printing ‘hello
+                        world’ in different languages</i>​, while others will be accepting meaningful code contributions to
+                        existing projects e.g. <i>​preparing tkinter gui for an existing console app</i>​. ​<span class="deep">Mentors</span>​ will be assigned
+                        to each project and they will be in-charge examining and accepting contributions. <span class="deep">​Chat channels</span>
+                        shall be arranged for interaction and co-ordinations between participants and mentors of each
+                        project.</p>
+
+                    <p>
+                        At the end of the event, digital certificates shall be awarded to the participants based on their
+                        contribution value and count. <span class="deep">​No bitoverflow certificates shall be awarded to participants
+                        with no contributions till the end of the event.</span> ​Participants can receive the following
+                        achievements on the certificates based on their contributions.
+                    </p>
+                    
+                    <p>
+                        <ul>
+                            <li><span class="deep b">Top Code</span>​ - If participants is among Top 5 contributors</li>
+                            <li><span class="deep b">Bit Knight</span>​ - awarded for valuable and meaningful code contributions
+                            <li><span class="deep b">Markdown Master​</span> - awarded for writing clear and comprehensible documentation</li>
+                            </li>
+                        </ul>
+                    </p>
+
+                    <!-- <div class="active-text">SITE UNDER CONSTRUCTION</div>
+                    <div class="active-text-alt">Next Update: 23/01/2019 2:00pm</div>
+               <a href="https://bit.ly/registertechxom" target="blank" class="reg">Register</a> -->
+
+               
+            </div>
+            <div class="sub-text">
+                <p class="b">Criteria for meaningful contributions:</p>
+                <p>The below given criteria shall be relaxed to a degree for beginner repositories</p>
+                <ul>
+                    <li>Commits containing only ​code <span class="sub">re-writes, comments, new-lines​</span> and <span class="sub">​spaces​</span> will ​not​ be
+                        accepted</li>
+                    <li>Commits containing documentation should be written in <span class="sub">​markdown</span>​ and should be
+                        <i>comprehensible</i></li>
+                    <li>Commits containing code should be properly <span class="sub">​indented​</span> and free from syntax errors</li>
+                    <li>Pull Requests should describe properly the <span class="sub">​changes</span>​ made in the commits</li>
+                </ul>
+                
+            </div>
+            <!-- <div class="main-image">
+                <img src="assets/coding-fun.png" alt="dell photo">
+            </div> -->
+        </div>
+    </main>
+
+    {% endblock %}
