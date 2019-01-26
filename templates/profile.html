@@ -16,10 +16,13 @@
                 <div class="h3"><a href="{{ data.profile_link }}" target="blank">{{ data.username }}</a></div>
                 <p>Name: <span class="spec-alt weight">{{ data.name }}</span></p>
                 <p>Email: <span class="spec-alt weight">{{ data.email }}</span></p>
-                <p>Total PRs:</p>
+                <p>Total PRs: <span class="spec-alt weight">{{ info.pr_count }} / {{ info.pr_open }}</span></p>
                 
-                <p>Total commits:</p>
+                <p>Total commits: <span class="spec-alt weight">{{ info.commit_count }}</span></p>
+                <p>Total additions: <span class="spec-alt weight">{{ info.line_add }}</span></p>
+                <p>Total deletions: <span class="spec-alt weight" >{{ info.line_delete }}</span></p>
 
+                
                 <div class="active-text">SITE UNDER CONSTRUCTION</div>
                 <div class="active-text-alt">Next Update: 24/01/2019 9:00pm</div>
            <a href="{{ url_for('logout') }}" class="reg">Log out</a>

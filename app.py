@@ -5,6 +5,7 @@ from flask_login import UserMixin, current_user, LoginManager, login_required, l
 from flask_dance.consumer.backend.sqla import OAuthConsumerMixin, SQLAlchemyBackend
 from flask_dance.consumer import oauth_authorized
 from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy import desc
 
 import os 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
@@ -31,6 +32,23 @@ class OAuth(OAuthConsumerMixin, db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey(User.id))
     user = db.relationship(User)
 
+class userInfo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String, unique = True)
+    name = db.Column(db.String)
+    user_link = db.Column(db.String)
+
+    pr_count = db.Column(db.Integer, default=0)
+    commit_count = db.Column(db.Integer, default=0)
+    pr_open = db.Column(db.Integer, default=0)
+    line_add = db.Column(db.Integer, default=0)
+    line_delete = db.Column(db.Integer, default=0)
+
+    def __init__(self, username, name, user_link):
+        self.username = username
+        self.name = name
+        self.user_link = user_link
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -43,6 +61,26 @@ print(__name__=="__main__")
 def home():
     return render_template("index.html", data=current_user)
 
+# stats routes 
+@app.route("/stats")
+def stats():
+    all_info = userInfo.query.all()
+    return render_template("stats.html", data=current_user, info=all_info)
+
+@app.route("/stats/<int:id>", methods = ["GET"])
+def stats_order(id):
+    if id==1:
+        all_info = userInfo.query.order_by(userInfo.name).all()
+    elif id==2:
+        all_info = userInfo.query.order_by(userInfo.username).all()
+    elif id==3:
+        all_info = userInfo.query.order_by(desc(userInfo.pr_count)).all()
+    else:
+        all_info = userInfo.query.order_by(desc(userInfo.commit_count)).all()
+
+    return render_template("stats.html", data=current_user, info=all_info)
+
+# stats routes end
 @app.route("/guide")
 def guide():
     return render_template("guide.html",  data=current_user)
@@ -77,6 +115,9 @@ def github_logged_in(blueprint, token):
         except NoResultFound:
             user = User(username = username, name=name, profile_link=profile_link, email=email, avatar=avatar)
             db.session.add(user)
+
+            userdata = userInfo(username = username, name=name, user_link=profile_link)
+            db.session.add(userdata)
             db.session.commit()
 
         login_user(user)
@@ -85,7 +126,8 @@ def github_logged_in(blueprint, token):
 @app.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html", data=current_user)
+    found_info = userInfo.query.filter_by(username = current_user.username).first()
+    return render_template("profile.html", data=current_user, info=found_info)
 
 @app.route("/logout")
 @login_required

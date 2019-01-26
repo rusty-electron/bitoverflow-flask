@@ -1,0 +1,95 @@
+.stat-body{
+    margin-top: 100px;
+}
+
+.stat-head{
+    font-family: 'Bungee';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.stat-head p{
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+    margin-top: 0;
+    color: #fff;
+}
+
+.white{
+    color: #fff;
+}
+
+.stat-box{
+    margin: 1rem 3rem;
+    padding: 1rem;
+    /* background-color: rgba(255,255,255,0.5); */
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    /* cursor: pointer; */
+    margin: 1rem auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+
+table, th, td {
+    border: 2px solid #17252a;
+}
+
+th{
+    background-color: #17252a;
+    color: #3aafa9;
+}
+
+th, td{
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+
+td{
+    color: #fff;
+}
+
+th a{
+    cursor: pointer;
+}
+
+.reg{
+    font-family:'Montserrat';
+    font-size: .9rem;
+    width: 150px;
+    cursor: pointer;
+}
+
+.found{
+    background-color: #375661;
+}
+
+@media(max-width: 800px){
+    .stat-head{
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .stat-head p{
+        font-size: 1rem;
+    }
+
+    .stat-body{
+        margin-top: 80px;
+    }
+
+    .stat-box{
+        margin: 1rem 1rem;
+        padding: 0.3rem;
+        /* background-color: rgba(255,255,255,0.5); */
+        overflow-x: auto;
+    }
+
+    table{
+        font-size: .9rem;
+    }
+}

@@ -27,8 +27,8 @@
             
                 <nav>
                     <a href="{{ url_for('home') }}">Home</a>
-                    <!-- <a href="#">Projects</a>
-                    <a href="#">Statistics</a> -->
+                    <!-- <a href="#">Projects</a>-->
+                    <a href="{{ url_for('stats') }}">Leaderboard</a> 
                     <a href="{{ url_for('guide') }}">Guide</a>
 
                     {% if data.username %}

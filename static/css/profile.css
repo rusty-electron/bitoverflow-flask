@@ -24,10 +24,11 @@
     }
 
     .main-image{
+        margin-top: 10px;
         order: -1;
     }
 
     .main-image p{
-        margin-top: 0rem;
+        margin-top: 0px;
     }
 }

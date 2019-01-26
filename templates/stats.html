@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/stats.css') }}">  
+    {% endblock %}
+    {% block content %}
+
+    <main>
+        <div class="stat-body">
+                <div class="stat-head">
+                        overflow <span class="white">Leaderboard</span>
+                        <p>*The statistics are updated after a <span class="spec-alt">specific time interval</span></p>
+
+                        {% if data.username %}
+                        <div class="reg">Locate Yourself</div>
+                        {% endif %}
+                    </div>
+
+                <div class="stat-box">
+                    <table>
+                        <tr>
+                            <th><a href="{{ url_for('stats_order', id=1) }}">Name</a></th>
+                            <th><a href="{{ url_for('stats_order', id=2) }}">Username</a></th>
+                            <th><a href="{{ url_for('stats_order', id=3) }}">Pull Requests</a></th>
+                            <th><a href="{{ url_for('stats_order', id=4) }}">Commits</a></th>
+                            <th>Total Additions</th>
+                            <th>Total Deletions</th>
+                        </tr>
+                        {% for user in info %}
+                        
+                        {% if user.username == data.username %}
+                            <tr class="found" style="cursor:pointer" onclick='window.open("{{ user.user_link }}")'>
+                        {% else %}
+                            <tr style="cursor:pointer" onclick='window.open("{{ user.user_link }}")'>
+                        {% endif %}    
+                    
+                            <td>{{ user.name }}</td>            
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.pr_count}} / {{user.pr_open}}</td>
+                            <td>{{ user.commit_count }}</td>
+                            <td>{{ user.line_add }}</td>
+                            <td>{{ user.line_delete }}</td></a>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+        </div>
+    </main>
+    {% if data.username %}
+    <script>
+        function scrollTo(element, to, duration) {
+            if (duration <= 0) return;
+            var difference = to - element.scrollTop;
+            var perTick = difference / duration * 10;
+
+            setTimeout(function() {
+                element.scrollTop = element.scrollTop + perTick;
+                if (element.scrollTop === to) return;
+                scrollTo(element, to, duration - 10);
+            }, 10);
+        }
+
+        let element = document.querySelector(".found")
+        let button = document.querySelector(".reg")
+
+        button.addEventListener("click", function(){
+            scrollTo(document.documentElement, element.offsetTop, 600)
+        })
+    </script>
+    {% endif %}
+    {% endblock %}
+
+    
