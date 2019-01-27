@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">  
+    {% endblock %}
+    {% block content %}
+
+    <main>
+        <div class="stat-body">
+                <div class="stat-head">
+                        <div>
+                                behind the <span class="white">overflow</span>
+                        </div>
+                        <p>BitOverflow is an event organized under <span class="spec-alt" style="font-weight: 700"><a href="http://bit.ly/techxom" target="_blank">TECHXOM 2019</a></span></p>
+                    </div>
+
+                <div class="team-box">
+                    <div class="team-head">Event <span class="spec">Team</span></div>
+
+                    <div class="team-members">
+                        <div class="member-box">
+                                <p class="desc">Site Developer/Organizer</p>
+                                <p class="name">Pritom Gogoi</p>
+                                <div class="member-links">
+                                    <div><a href="https://github.com/rusty-electron" target="_blank"><img src="{{ url_for('static', filename='img/gh.png') }}" alt=""></a></div>
+                                    <div><a href="https://www.linkedin.com/in/pritom-gogoi/" target="_blank"><img src="{{ url_for('static', filename='img/in.png') }}" alt=""></a></div>
+                                    <div><a href="https://medium.com/@kickstart7962/" target="_blank"><img src="{{ url_for('static', filename='img/bl.png') }}" alt=""></a></div>
+                                </div>
+                        </div>
+                        <div class="member-box">
+                                <p class="desc">Assistant Organizer</p>
+                                <p class="name">Rajarshi Das</p>
+                                <div class="member-links">
+                                        <div><a href="" target="_blank"><img src="{{ url_for('static', filename='img/gh.png') }}" alt=""></a></div>
+                                        <div><a href="" target="_blank"><img src="{{ url_for('static', filename='img/in.png') }}" alt=""></a></div>
+                                        <div><a href="" target="_blank"><img src="{{ url_for('static', filename='img/fb.png') }}" alt=""></a></div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- different stuff -->
+                    <div class="team-head">Institutions <span class="spec">Involved</span></div>
+
+                    <div class="team-members">
+                        <div class="member-box">
+        
+                                <p class="name">Indian Society for Technical Education - ISTE</p>
+                                <div class="big-png">
+                                    <a href="http://www.isteonline.in/" target="_blank"><img src="{{ url_for('static', filename='img/iste.png') }}" alt=""></a>
+                                </div>
+                        </div>
+                        <div class="member-box">
+
+                                <p href="http://www.aec.ac.in/" target="_blank" class="name">Assam Engineering College</p>
+                                <div class="big-png">
+                                        <a><img src="{{ url_for('static', filename='img/aec.png') }}" alt=""></a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- different stuff -->
+                    <div class="team-head">Technologies <span class="spec">Used</span></div>
+
+                    <div class="team-members">
+                        <div class="member-box">
+        
+                                <p class="name">Flask</p>
+                                
+                        </div>
+                        <div class="member-box">
+
+                                <p class="name">Flask-SQLAlchemy</p>
+                                
+                        </div>
+                        <div class="member-box">
+        
+                                <p class="name">Flask-Dance</p>
+                                <!-- <div class="big-png">
+                                    <a><img src="{{ url_for('static', filename='img/dance.png') }}" alt=""></a>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-box">
+                        <p class="thanks">Thanks</p>
+                        <p>for viewing this page to <span class="white">learn about us</span>.</p>
+                </div>
+                
+        </div>
+    </main>
+    {% endblock %}
+
+    

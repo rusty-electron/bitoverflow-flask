@@ -1,0 +1,167 @@
+.stat-body{
+    margin-top: 120px;
+}
+
+.stat-head{
+    font-family: 'Bungee';
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    padding: 2rem;
+}
+
+.stat-head p{
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+    margin-top: 0;
+    color: #fff;
+}
+
+.white{
+    color: #fff;
+}
+
+.reg{
+    font-family:'Montserrat';
+    font-size: .9rem;
+    width: 150px;
+    cursor: pointer;
+}
+
+.team-box{
+    background-color: rgb(255, 255, 255, 0.8);
+    padding-top: 20px;
+}
+
+.team-head{
+    text-align: center;
+    font-family: 'Bungee';
+    font-size: 1.3rem;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.team-members{
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.member-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-links div{
+    width: 35px;
+    padding: 0 10px;
+}
+
+.member-links div img{
+    width: 100%;
+}
+
+.member-box{
+    font-family: 'Montserrat';
+    flex: 1;
+    /* border: 1px solid #000; */
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;  
+}
+
+/* .member-box p{
+    padding: 0;
+} */
+
+.desc{
+    color: #3aafa9;
+    font-weight: 700;
+}
+
+.big-png{
+    text-align: center;
+    width: 200px;
+}
+
+.big-png{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.big-png a img{
+    width: 100%;
+}
+
+.footer-box{
+    margin: 4rem;
+}
+
+.footer-box p{
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.thanks{
+    margin-bottom: 1.1rem !important;
+    line-height: 2rem;
+    font-size: 2rem !important;
+    font-family: 'Bungee' !important;
+}
+
+@media(max-width: 800px){
+
+    .stat-body{
+        margin-top: 90px;
+    }
+
+    .stat-head{
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    .stat-head div{
+        padding-bottom: 20px;
+    }
+    
+    .stat-head p{
+        font-size: 1rem;
+    }
+
+    .team-members{
+        display: block;
+        padding-bottom: 2rem;
+    }
+
+    .member-box{
+        padding-bottom: 10px;  
+    }
+
+    .big-png{
+        width: 170px;
+    }
+
+    .footer-box{
+        margin: 2.5rem 1.3rem;
+    }
+    
+    .footer-box p{
+        font-family: 'Montserrat';
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .thanks{
+        margin-bottom: 1.1rem !important;
+        line-height: 2rem;
+        font-size: 2rem !important;
+        font-family: 'Bungee' !important;
+    }
+
+    .member-box .name{
+        padding: 1rem;
+    }
+}

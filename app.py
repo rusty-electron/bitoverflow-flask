@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yoyohoneysingh'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///oauth/login.db'
 
-github_bp = make_github_blueprint(client_id='4035f36da25790d28f88', client_secret='2132f2e71596a9b7d19d1550e683adec7bec8642')
+github_bp = make_github_blueprint(client_id='99e1b3c00d561e8b5d8c', client_secret='c6bfe7353ef012d67d3823ff218f7b4961165779')
 app.register_blueprint(github_bp, url_prefix="/github_login")
 
 db = SQLAlchemy(app)
@@ -84,6 +84,10 @@ def stats_order(id):
 @app.route("/guide")
 def guide():
     return render_template("guide.html",  data=current_user)
+
+@app.route("/about")
+def about():
+    return render_template("about.html",  data=current_user)
 
 @app.route("/github")
 def github_login():
