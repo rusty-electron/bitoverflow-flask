@@ -18,6 +18,7 @@
                 <div class="stat-box">
                     <table>
                         <tr>
+                            <th>Count</th>
                             <th><a href="{{ url_for('stats_order', id=1) }}">Name</a></th>
                             <th><a href="{{ url_for('stats_order', id=2) }}">Username</a></th>
                             <th><a href="{{ url_for('stats_order', id=3) }}">Pull Requests</a></th>
@@ -32,7 +33,7 @@
                         {% else %}
                             <tr style="cursor:pointer" onclick='window.open("{{ user.user_link }}")'>
                         {% endif %}    
-                    
+                            <td>{{ loop.index }}</td>
                             <td>{{ user.name }}</td>            
                             <td>{{ user.username }}</td>
                             <td>{{ user.pr_count}} / {{user.pr_open}}</td>
