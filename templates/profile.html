@@ -23,8 +23,8 @@
                 <p>Total deletions: <span class="spec-alt weight" >{{ info.line_delete }}</span></p>
 
                 
-                <div class="active-text">SITE UNDER CONSTRUCTION</div>
-                <div class="active-text-alt">Next Update: 24/01/2019 9:00pm</div>
+                <div class="active-text">{{ msg[0] }}</div>
+                <div class="active-text-alt">Next Update: {{ msg[1] }}</div>
            <a href="{{ url_for('logout') }}" class="reg">Log out</a>
 
         </div>

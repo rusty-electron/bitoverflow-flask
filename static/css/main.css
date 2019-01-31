@@ -186,6 +186,7 @@ nav a:hover{
 }
 
 .active-text{
+    text-transform: uppercase;
     color: #17252a;
     font-size: 2rem;
     font-weight: 600; 

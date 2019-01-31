@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pills.css') }}">
+{% endblock %}
+
+{% block home %}
+   {{ super() }}
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="stat-body">
+            <div class="stat-head">
+                    <div>
+                            Projects <span class="white">List</span>
+                    </div>
+                    <p>Choose one or <span class="spec-alt" style="font-weight: 700">more</span> of the projects to which you wish to <span class="spec-alt" style="font-weight: 700">contribute</span></p>
+                </div>
+
+            <div class="team-box">
+                <div class="team-head">Select and<span class="spec"> Commit</span></div>
+            </div> 
+            <div class="project-list">
+                {% for project in list %}
+
+                <div class="project-box">
+
+                    {% if project.level == "Beginner" %}
+                        <div class="level">{{ project.level }}</div>
+                    {% else %}
+                        <div class="level inter">{{ project.level }}</div>
+                    {% endif %}
+
+                    <div class="title">{{ project.title }}</div>
+                    <div class="desc">{{ project.desc }}</div>
+
+                    <div class="mentor">Mentor: {{ project.mentor }}</div>
+
+                    <div class="tags">
+                        {% for pairs in project.tags %}
+                            {% for x,y in pairs.items() %}
+                        <div class="{{ x }}">{{ y }}</div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                    <div class="slack">
+                        <a href="{{ project.slack }}" target="_blank">Join Chat</a>
+                        <a class="git" href="{{ project.url }}" target="_blank">Project Link</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                
+            </div>    
+    </div>
+</main>
+{% endblock %}

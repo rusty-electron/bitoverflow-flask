@@ -1,0 +1,41 @@
+.py{
+    background-color: yellow;
+}
+
+.cpp{
+    background-color: rgb(78, 78, 233);
+    color: #fff;
+}
+
+.multi{
+    background-color: rgb(185, 80, 80);
+    color: #fff;
+}
+
+.html{
+    background-color: rgb(97, 201, 128);
+}
+
+.hello{
+    background-color: rgb(114, 114, 114);
+    color: #fff;
+}
+
+.css{
+    background-color: rgb(108, 122, 197);
+    color: #fff;
+}
+
+.js{
+    background-color: rgb(197, 108, 197);
+    color: #fff;
+}
+
+.front{
+    background-color: rgb(255, 255, 255);
+}
+
+.console{
+    background-color: rgb(202, 184, 78);
+    color: #fff;
+}

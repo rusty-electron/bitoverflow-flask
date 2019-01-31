@@ -7,6 +7,8 @@ from flask_dance.consumer import oauth_authorized
 from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy import desc
 
+from project import projectList
+
 import os 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
@@ -57,9 +59,11 @@ github_bp.backend = SQLAlchemyBackend(OAuth, db.session, user=current_user, user
 
 print(__name__=="__main__")
 
+message = ['choose your projects', 'main-stream projects']
+
 @app.route("/")
 def home():
-    return render_template("index.html", data=current_user)
+    return render_template("index.html", data=current_user, msg = message)
 
 # stats routes 
 @app.route("/stats")
@@ -88,6 +92,10 @@ def guide():
 @app.route("/about")
 def about():
     return render_template("about.html",  data=current_user)
+
+@app.route("/projects")
+def projects():
+    return render_template("projects.html",  data=current_user, list=projectList)
 
 @app.route("/github")
 def github_login():
@@ -131,7 +139,7 @@ def github_logged_in(blueprint, token):
 @login_required
 def profile():
     found_info = userInfo.query.filter_by(username = current_user.username).first()
-    return render_template("profile.html", data=current_user, info=found_info)
+    return render_template("profile.html", data=current_user, info=found_info, msg = message)
 
 @app.route("/logout")
 @login_required

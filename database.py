@@ -33,13 +33,16 @@ for user in users:
     users_list.append(user.username)
 
 #PyGithub stuff
-
 from github import Github
 
 g = Github("046c99159c4e1dbb4ebedc157b173459e0488ec4")
 repo_list = [
-    "bitoverflow-in/pr-test"
+    "bitoverflow-in/snake-oil-product-page",
+    "bitoverflow-in/stan-lee-tribute-page",
+    "bitoverflow-in/hello-bitoverflow",
+    "bitoverflow-in/calculator-all"
 ]
+
 for repo in repo_list:
     repo_main = g.get_repo(repo)
     pulls = repo_main.get_pulls(state='all', sort='created', base='master')

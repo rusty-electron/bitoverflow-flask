@@ -17,8 +17,8 @@
                         <div class="active-text-alt">You are logged in as: <span class="spec-alt">{{ data.username }}</span></div>
                     {% endif %}    
                 
-                    <div class="active-text">BACKEND SETUP COMPLETE</div>
-                    <div class="active-text-alt">Next Update: Project Lists</div>
+                    <div class="active-text">{{ msg[0] }}</div>
+                    <div class="active-text-alt">Next Update: {{ msg[1] }}</div>
                     
                 <div class="button-container">
                 {% if data.username %}
