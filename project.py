@@ -45,5 +45,14 @@ stan = Project(
             "https://join.slack.com/t/stanlee-tributepage/shared_invite/enQtNTQwMzA2Nzc5Nzk4LTQzODAwNzZlNzNhMjJjMmEyNmNhYzY5N2I3NjE2NDkyNTM4YzViYmM1NmE2YTQ3N2VhODZiZjE3NTE1ZDIwNDc",
             "https://github.com/bitoverflow-in/stan-lee-tribute-page")
 
+scrape = Project(
+            "Mainstream", 
+            "Scrape-Site-Face",
+            "Write a script that scrapes a given website url for images, once gathered search the images for face using any face detection algorithm and crop the faces as separate image files",
+            "Pritom Gogoi",
+            [{"py":"Python"}, {"scrape":"Web Scraping"}, {"cv":"OpenCV"}, {"auto":"Automating"}],
+            "https://join.slack.com/t/scrape-site-face/shared_invite/enQtNTQwNzczNDc4NjQ1LWM2ZjRlZGEwMjQzMmMwYzg1NTA0ZDU2MmQxMmE0ZDhmMDczY2U0OTliMDczNjcyZmU4MzNmYmQyNTBiMDdmMGY",
+            "https://github.com/bitoverflow-in/scrape-site-face")
 
-projectList = [hello, snake, calc, stan ]
+
+projectList = [hello, snake, calc, stan, scrape]

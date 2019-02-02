@@ -2,6 +2,21 @@
     background-color: yellow;
 }
 
+.scrape{
+    background-color: rgb(17, 78, 36);
+    color: #fff;
+}
+
+.cv{
+    background-color: rgb(209, 71, 37);
+    color: #fff;
+}
+
+.auto{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+}
+
 .cpp{
     background-color: rgb(78, 78, 233);
     color: #fff;
