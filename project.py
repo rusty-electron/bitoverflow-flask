@@ -54,5 +54,22 @@ scrape = Project(
             "https://join.slack.com/t/scrape-site-face/shared_invite/enQtNTQwNzczNDc4NjQ1LWM2ZjRlZGEwMjQzMmMwYzg1NTA0ZDU2MmQxMmE0ZDhmMDczY2U0OTliMDczNjcyZmU4MzNmYmQyNTBiMDdmMGY",
             "https://github.com/bitoverflow-in/scrape-site-face")
 
+youtubemp3 = Project(
+            "Mainstream", 
+            "Youtube-MP3-GUI",
+            "Design a GUI for a youtube to mp3 converter script. The script is written using python and the GUI is to be developed using tkinter GUI library. ",
+            "Pritom Gogoi",
+            [{"py":"Python"}, {"gui":"GUI"}, {"tk":"Tkinter"}, {"yt":"Youtube-DL"}],
+            "https://join.slack.com/t/youtube-mp3-gui/shared_invite/enQtNTQxOTEwNzYzNDc5LWZiNGVjOTc5N2ZiNDJjZmI1NWE5OGYwNWZkYzM0Mzc1ZmM0NmYyY2RlMzRlYmZjNjgxZWRmMTZmMjA1OGFjYWU",
+            "https://github.com/bitoverflow-in/youtube-mp3-gui")
 
-projectList = [hello, snake, calc, stan, scrape]
+learntk = Project(
+            "Beginner", 
+            "Learn Tkinter",
+            "Learn the Basics of making GUI using tkinter and implement it in making designs for On-screen Keyboard and TV Remote",
+            "Pritom Gogoi",
+            [{"py":"Python"}, {"gui":"GUI"}, {"tk":"Tkinter"}],
+            "https://join.slack.com/t/learn-tkinter/shared_invite/enQtNTQwMjQ1NjMyMTI5LWI1ZmNkZTAwZjZmZjlkZmJhNWI0OGM5NGE1NmJhMDhkNzBjNjVkMTUyMzVhMWUwZGNmMjQ1MGJmYWQ2ZDhmMjY",
+            "https://github.com/bitoverflow-in/learn-tkinter")
+
+projectList = [hello, scrape, snake, calc, stan, learntk, youtubemp3]

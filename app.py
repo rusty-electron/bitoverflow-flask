@@ -68,7 +68,7 @@ def home():
 # stats routes 
 @app.route("/stats")
 def stats():
-    all_info = userInfo.query.all()
+    all_info = userInfo.query.order_by(desc(userInfo.pr_count)).all()
     return render_template("stats.html", data=current_user, info=all_info)
 
 @app.route("/stats/<int:id>", methods = ["GET"])
