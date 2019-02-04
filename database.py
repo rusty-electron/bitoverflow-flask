@@ -5,6 +5,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///oauth/login.db'
 db = SQLAlchemy(app)
 
+from project import projectList
+
 class userInfo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique = True)
@@ -32,16 +34,13 @@ for user in users:
     
     users_list.append(user.username)
 
-#PyGithub stuff
+# PyGithub stuff
 from github import Github
 
 g = Github("046c99159c4e1dbb4ebedc157b173459e0488ec4")
-repo_list = [
-    "bitoverflow-in/snake-oil-product-page",
-    "bitoverflow-in/stan-lee-tribute-page",
-    "bitoverflow-in/hello-bitoverflow",
-    "bitoverflow-in/calculator-all"
-]
+repo_list = [ item.url[19:] for item in projectList ]
+# for item in repo_list:
+#     print(item)
 
 for repo in repo_list:
     repo_main = g.get_repo(repo)

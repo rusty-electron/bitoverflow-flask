@@ -72,4 +72,14 @@ learntk = Project(
             "https://join.slack.com/t/learn-tkinter/shared_invite/enQtNTQwMjQ1NjMyMTI5LWI1ZmNkZTAwZjZmZjlkZmJhNWI0OGM5NGE1NmJhMDhkNzBjNjVkMTUyMzVhMWUwZGNmMjQ1MGJmYWQ2ZDhmMjY",
             "https://github.com/bitoverflow-in/learn-tkinter")
 
-projectList = [hello, scrape, snake, calc, stan, learntk, youtubemp3]
+subwar = Project(
+            "Mainstream", 
+            "Pewdiepie-V-Tseries",
+            "Create a webpage showing live subcriber count for the ongoing subcriber war between the King of Youtube, PewDiePie and Corporate Giant, T-Series. Be a part of this battle and maintain the record of daily subcriber count.",
+            "Pritom Gogoi",
+            [{"yt":"Youtube"}, {"api":"API"}, {"front":"frontend"}],
+            "https://join.slack.com/t/stanlee-tributepage/shared_invite/enQtNTQwMzA2Nzc5Nzk4LTQzODAwNzZlNzNhMjJjMmEyNmNhYzY5N2I3NjE2NDkyNTM4YzViYmM1NmE2YTQ3N2VhODZiZjE3NTE1ZDIwNDc",
+            "https://github.com/bitoverflow-in/pewdiepie-v-tseries")
+
+
+projectList = [hello, scrape, snake, calc, stan, learntk, youtubemp3, subwar]
