@@ -8,6 +8,7 @@ from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy import desc
 
 from project import projectList
+from mentor import ignoreList
 
 import os 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
@@ -69,7 +70,7 @@ def home():
 @app.route("/stats")
 def stats():
     all_info = userInfo.query.order_by(desc(userInfo.pr_count)).all()
-    return render_template("stats.html", data=current_user, info=all_info)
+    return render_template("stats.html", data=current_user, info=all_info, ignoreList=ignoreList)
 
 @app.route("/stats/<int:id>", methods = ["GET"])
 def stats_order(id):
@@ -82,7 +83,7 @@ def stats_order(id):
     else:
         all_info = userInfo.query.order_by(desc(userInfo.commit_count)).all()
 
-    return render_template("stats.html", data=current_user, info=all_info)
+    return render_template("stats.html", data=current_user, info=all_info, ignoreList=ignoreList)
 
 # stats routes end
 @app.route("/guide")

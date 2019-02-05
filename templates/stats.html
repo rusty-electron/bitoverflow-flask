@@ -28,14 +28,17 @@
                             <th>Total Additions</th>
                             <th>Total Deletions</th>
                         </tr>
+			{% set count = namespace(a=1) %}
                         {% for user in info %}
                         
+                        {% if user.username not in ignoreList %}
+
                         {% if user.username == data.username %}
                             <tr class="found" style="cursor:pointer" onclick='window.open("{{ user.user_link }}")'>
                         {% else %}
                             <tr style="cursor:pointer" onclick='window.open("{{ user.user_link }}")'>
                         {% endif %}    
-                            <td>{{ loop.index }}</td>
+                            <td>{{ count.a }}</td> {% set count.a = count.a + 1 %} 
                             <td>{{ user.name }}</td>            
                             <td>{{ user.username }}</td>
                             <td>{{ user.pr_count}} / {{user.pr_open}}</td>
@@ -43,6 +46,8 @@
                             <td>{{ user.line_add }}</td>
                             <td>{{ user.line_delete }}</td></a>
                         </tr>
+
+                        {% endif %}
                         {% endfor %}
                     </table>
                 </div>
