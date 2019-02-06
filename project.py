@@ -81,5 +81,14 @@ subwar = Project(
             "https://join.slack.com/t/stanlee-tributepage/shared_invite/enQtNTQwMzA2Nzc5Nzk4LTQzODAwNzZlNzNhMjJjMmEyNmNhYzY5N2I3NjE2NDkyNTM4YzViYmM1NmE2YTQ3N2VhODZiZjE3NTE1ZDIwNDc",
             "https://github.com/bitoverflow-in/pewdiepie-v-tseries")
 
+imgur = Project(
+            "Mainstream", 
+            "UrPhoto",
+            "Ever heard of Imgur, online image sharing community and image host; Here is your chance to build your own version of Imgur with your custom Tech Stack",
+            "Rajat Kanti Bhattacharjee",
+            [{"node":"NodeJS"}, {"js":"Javascript"}, {"exp":"Express"}, {"mgdb":"MongoDB"}],
+            "https://join.slack.com/t/stanlee-tributepage/shared_invite/enQtNTQwMzA2Nzc5Nzk4LTQzODAwNzZlNzNhMjJjMmEyNmNhYzY5N2I3NjE2NDkyNTM4YzViYmM1NmE2YTQ3N2VhODZiZjE3NTE1ZDIwNDc",
+            "https://github.com/bitoverflow-in/urphoto")
 
-projectList = [hello, scrape, snake, calc, stan, learntk, youtubemp3, subwar]
+
+projectList = [hello, scrape, snake, imgur, calc, stan, subwar, learntk, youtubemp3, ]

@@ -60,7 +60,7 @@ github_bp.backend = SQLAlchemyBackend(OAuth, db.session, user=current_user, user
 
 print(__name__=="__main__")
 
-message = ['choose your projects', 'main-stream projects']
+message = ['event has started', 'main-stream projects']
 
 @app.route("/")
 def home():

@@ -73,3 +73,18 @@
 .api{
     background-color: rgb(224, 240, 11);
 }
+
+.node{
+    background-color: rgb(25, 102, 32);
+    color: #fff;
+}
+
+.exp{
+    background-color: rgb(51, 53, 51);
+    color: #fff;
+}
+
+.mgdb{
+    background-color: rgb(253, 253, 253);
+    color: rgb(91, 230, 27);
+}
