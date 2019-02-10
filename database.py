@@ -51,12 +51,12 @@ for repo in repo_list:
             found_user = userInfo.query.filter_by(username=pr.user.login).first()
             found_user.name = pr.user.name
             found_user.user_link = pr.user.html_url
-            if pr.state=='closed':
+            if pr.merged==True:
                 found_user.pr_count+=1
                 found_user.commit_count+=pr.commits
                 found_user.line_add+=pr.additions
                 found_user.line_delete+=pr.deletions
-            else:
+            if pr.state=="open":
                 found_user.pr_open+=1
 
 db.session.commit()
