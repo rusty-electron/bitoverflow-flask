@@ -37,7 +37,7 @@ for user in users:
 # PyGithub stuff
 from github import Github
 
-g = Github("046c99159c4e1dbb4ebedc157b173459e0488ec4")
+g = Github("<insert>")
 repo_list = [ item.url[19:] for item in projectList ]
 # for item in repo_list:
 #     print(item)

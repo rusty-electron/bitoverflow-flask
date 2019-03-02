@@ -14,10 +14,10 @@ import os
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'yoyohoneysingh'
+app.config['SECRET_KEY'] = '<password>'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///oauth/login.db'
 
-github_bp = make_github_blueprint(client_id='99e1b3c00d561e8b5d8c', client_secret='c6bfe7353ef012d67d3823ff218f7b4961165779')
+github_bp = make_github_blueprint(client_id='<insert>', client_secret='<insert>')
 app.register_blueprint(github_bp, url_prefix="/github_login")
 
 db = SQLAlchemy(app)
