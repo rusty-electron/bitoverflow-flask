@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for
 from flask_dance.contrib.github import make_github_blueprint, github
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, current_user, LoginManager, login_required, login_user, logout_user
-from flask_dance.consumer.backend.sqla import OAuthConsumerMixin, SQLAlchemyBackend
+from flask_dance.consumer.storage.sqla import OAuthConsumerMixin, SQLAlchemyStorage
 from flask_dance.consumer import oauth_authorized
 from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy import desc
@@ -56,7 +56,7 @@ class userInfo(db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-github_bp.backend = SQLAlchemyBackend(OAuth, db.session, user=current_user, user_required=False)
+github_bp.backend = SQLAlchemyStorage(OAuth, db.session, user=current_user, user_required=False)
 
 print(__name__=="__main__")
 
