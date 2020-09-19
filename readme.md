@@ -16,6 +16,9 @@ This website primarily uses the following tools:
 Note: To deploy as Production Server, don't use this method rather create a WSGI file and deploy using it.
 
 1. Create a virtual environment (Optional)
-1. Install dependencies from `requirements.txt`
+1. Install dependencies from `requirements.txt` using the command:
+```markdown
+pip install -r requirements.txt
+```
 1. Run `app.py`
 1. To update leaderboard, run `database.py`. (It is advise to create a scheduled task for it.) 
